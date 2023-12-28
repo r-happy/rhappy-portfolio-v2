@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import * as s from "./Header.css";
@@ -39,13 +39,22 @@ const Navi: NavObject[] = [
 export function Header() {
   const [isActive, setIsActive] = useState<boolean>(false);
 
+  useEffect(() => {
+    const body = document.body;
+    const initialOverflow = body.style.overflow;
+
+    if (isActive) {
+      body.style.overflow = "hidden";
+    }
+    return () => {
+      body.style.overflow = initialOverflow;
+    };
+  }, [isActive]);
+
   return (
     <div>
       <button
-        className={clsx(
-          s.wrapper,
-          w.border,
-        )}
+        className={clsx(s.wrapper, w.border)}
         onClick={() => {
           setIsActive(!isActive);
         }}

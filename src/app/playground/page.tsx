@@ -1,7 +1,6 @@
 import clsx from "clsx";
 
 import * as w from "@/styles/whole.css";
-import * as s from "./page.css";
 import { PageTitle } from "@/components/PageTitle/PageTitle";
 import { Card, Card_Props } from "@/components/Card/Card";
 
@@ -22,7 +21,7 @@ export default function Playground() {
     <main>
       <div className={clsx(w.container)}>
         <PageTitle>遊び場</PageTitle>
-        <div className={clsx(s.content, w.grid)}>
+        <div className={clsx(w.grid)}>
           {toys.map((e, index) => {
             return (
               <Card key={index} title={e.title} href={e.href}>
