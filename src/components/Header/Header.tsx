@@ -45,7 +45,6 @@ export function Header() {
         className={clsx(
           s.wrapper,
           w.border,
-          isActive ? s.is_active_wrapper : s.not_active_wrapper
         )}
         onClick={() => {
           setIsActive(!isActive);
