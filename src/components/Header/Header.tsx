@@ -55,6 +55,7 @@ export function Header() {
     <div>
       <button
         className={clsx(s.wrapper, w.border)}
+        aria-label="switch"
         onClick={() => {
           setIsActive(!isActive);
         }}
