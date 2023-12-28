@@ -22,7 +22,7 @@ export default function Playground() {
     <main>
       <div className={clsx(w.container)}>
         <PageTitle>遊び場</PageTitle>
-        <div className={clsx(s.content)}>
+        <div className={clsx(s.content, w.grid)}>
           {toys.map((e, index) => {
             return (
               <Card key={index} title={e.title} href={e.href}>

@@ -1,6 +1,6 @@
 import { Colors } from "@/styles/color";
 import { mediaQueryScreen } from "@/styles/queries";
-import { keyframes, style } from "@vanilla-extract/css";
+import {  style } from "@vanilla-extract/css";
 
 export const wrapper = style({
   position: "fixed",
@@ -12,30 +12,17 @@ export const wrapper = style({
   justifyContent: "center",
   alignItems: "center",
   borderRadius: "100%",
+  zIndex: "20",
+  transition: "all 0.3s",
+  ':hover': {
+    scale: "0.8"
+  },
 
   "@media": {
     [mediaQueryScreen("md")]: {
       height: "72px",
       width: "72px",
     },
-  },
-});
-
-export const is_active_wrapper = style({
-  background: Colors.color.background.header.button.active,
-  transition: "0.3s",
-  zIndex: "20",
-
-  ":hover": {
-    background: Colors.color.background.header.button.notactive,
-  },
-});
-
-export const not_active_wrapper = style({
-  transition: "0.3s",
-
-  ":hover": {
-    background: Colors.color.background.header.button.active,
   },
 });
 
@@ -59,9 +46,7 @@ export const content = style({
 });
 
 export const header_LinkStyle = style({
-  transition: "all 0.3s",
-  display: "inline-block",
   ":hover": {
-    transform: "translate(1.2rem,0)",
+    textDecoration: "underline"
   },
 });

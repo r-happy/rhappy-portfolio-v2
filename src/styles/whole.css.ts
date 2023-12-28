@@ -45,3 +45,8 @@ export const LinkStyle = style({
     textDecoration: "none",
   },
 });
+
+export const grid = style({
+  display: "grid",
+  gap: "4rem",
+})

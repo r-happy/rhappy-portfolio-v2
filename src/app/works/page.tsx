@@ -24,7 +24,7 @@ export default function Works() {
     <main>
       <div className={clsx(w.container)}>
         <PageTitle>お仕事</PageTitle>
-        <div className={clsx(s.content)}>
+        <div className={clsx(s.content, w.grid)}>
           {works.map((e, index) => {
             return (
               <Card key={index} title={e.title} href={e.href}>
