@@ -41,6 +41,7 @@ globalStyle(`${table} th, td`, {
 
 export const LinkStyle = style({
   textDecoration: "underline",
+  width: "100%",
   ":hover": {
     textDecoration: "none",
   },
@@ -49,4 +50,14 @@ export const LinkStyle = style({
 export const grid = style({
   display: "grid",
   gap: "4rem",
-})
+});
+
+export const padding = style({
+  padding: "0.6rem",
+
+  "@media": {
+    [mediaQueryScreen("md")]: {
+      padding: "0.8rem",
+    },
+  },
+});

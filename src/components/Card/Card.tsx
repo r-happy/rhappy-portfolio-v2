@@ -13,9 +13,9 @@ export interface Card_Props {
 
 export const Card = (p: Card_Props) => {
   return (
-    <div className={clsx(s.wrapper, w.border)}>
+    <div className={clsx(s.wrapper, w.border, w.padding)}>
       <h2 className={clsx(s.card_title)}>{p.title}</h2>
-      <div className={clsx(s.content)}>{p.children}</div>
+      <div className={clsx(w.padding)}>{p.children}</div>
       <Link
         href={p.href}
         target="_blank"
