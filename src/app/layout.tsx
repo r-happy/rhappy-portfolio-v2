@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 // setting font
 const myFont = localFont({
-  src: "../assets/fonts/SourceHanSansK-VF.otf.woff2",
+  src: "../assets/fonts/SourceHanSansJP-VF.otf.woff2",
   fallback: ["sans-serif"],
 });
 
